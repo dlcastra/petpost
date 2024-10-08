@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% load static %}
+<script src="{% static 'admin/js/jquery.init.js' %}"></script>
+{% block content %}
+    <style>
+        .custom-card {
+            padding: 10px;
+            width: 500px;
+            height: 1000px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-left: -278px;
+        }
+
+        .col-md-6 {
+            float: right; /* Плавающее выравнивание справа */
+            margin-top: -1000px; /* Смещение вверх на 20px (измените значение по вашему усмотрению) */
+        }
+
+        .img-fluid {
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+        }
+
+    </style>
+    <br>
+    <section>
+        <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+            <div class="container h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                        <div class="card custom-card">
+                            <div class="card-body p-5">
+                                <h2 class="text-uppercase text-center mb-5">FORMULARZ ZAMÓWIENIA</h2>
+
+                                <form action="{% url 'order' %}" method="post">
+                                    {% csrf_token %}
+                                    {% bootstrap_form form %}
+                                    <br>
+                                    <div class="d-flex justify-content-between">
+                                        <a href="{% url 'main' %}" class="btn btn-danger custom-btn">Zmieniłem
+                                            zdanie</a>
+                                        <input type="submit" class="btn btn-success custom-btn" value="Potwierdzam">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="container">
+                <img src="{% static 'main/intorder.jpg' %}" alt="Your Image" class="img-fluid">
+                <br>
+                <p>Potrzebujesz wysokiej jakości międzynarodowej wysyłki zwierząt domowych? Nasza firma właśnie to
+                    robi!</p>
+                <p>Realizujemy międzynarodowy transport zwierząt - psów, kotów, koni, ptaków i innych przedstawicieli.
+                    Nasza firma oferuje pełną gamę wysokiej jakości rozwiązań w zakresie eksportu, importu i
+                    niekomercyjnego przemieszczania zwierząt przez granice.</p>
+                <p>Międzynarodowy transport zwierząt związany z przeprowadzką do innego kraju, sprzedażą lub kupnem za
+                    granicą, podróżą lub wyjazdem na wystawę jest ważną częścią naszej pracy. Międzynarodowa współpraca
+                    i kooperacja z największymi liniami lotniczymi pozwala nam świadczyć najszerszy zakres usług.</p>
+                <p>Z nami możesz::</p>
+                <ol>
+                    <li>Zorganizować transport międzynarodowy</li>
+                    <li>Zamówić dostawę zwierząt na terytorium innego kraju lub między granicami innych krajów</li>
+                    <li>Zamówić zakup zwierząt za granicą</li>
+                    <li>Przygotowanie dokumentów do transportu międzynarodowego</li>
+                    <li>Stworzenie usługi zgodnie z indywidualnymi wymaganiami</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <br>
+{% endblock %}

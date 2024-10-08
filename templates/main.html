@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+<script src="{% static 'admin/js/jquery.init.js' %}"></script>
+{% block content %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <h1 class="text-center mb-4">Transport zwierząt: łatwo, wygodnie, bezpiecznie</h1>
+                <p class="lead text-center">Dbamy o komfort i bezpieczeństwo Twoich zwierząt.</p>
+                <hr class="my-4">
+                <h2 class="text-center mb-4">Nasze usługi</h2>
+                <ol>
+                    <li>Wybór potrzebnej usługi: Prosimy zapoznać się z oferowanymi usługami z listy. Przejdź na stronę
+                        wybranej usługi i wypełnij formularz zamówienia.
+                    </li>
+                    <li>Składanie zamówienia: Bądź ostrożny podczas wypełniania danych, po wypełnieniu formularza nasz
+                        pracownik skontaktuje się z Tobą w celu potwierdzenia danych.
+                    </li>
+                    <li>Zakończenie zamówienia: Zamówienie uznaje się za zrealizowane po zakończeniu dostawy zwierzęcia,
+                        dostarczeniu dokumentów lub spełnieniu innych ustalonych kryteriów.
+                    </li>
+                    <li>Dodatkowe funkcje: Zawsze możesz się z nami skontaktować, aby uzyskać dodatkowe informacje.
+                        Uwzględniamy wszystkie życzenia i oferujemy indywidualne podejście.
+                    </li>
+                </ol>
+                <hr class="my-4">
+                <h2 class="text-center mb-4">Nasze zalety</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="advantage-card">
+                            <i class="fas fa-truck"></i>
+                            <h3>Nowoczesny transport</h3>
+                            <p>Używamy tylko nowoczesnych i wyposażonych samochodów.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="advantage-card">
+                            <i class="fas fa-user-md"></i>
+                            <h3>Doświadczeni kierowcy</h3>
+                            <p>Nasi kierowcy mają duże doświadczenie w transporcie zwierząt.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="advantage-card">
+                            <i class="fas fa-paw"></i>
+                            <h3>Troska o zwierzęta</h3>
+                            <p>Zapewniamy komfortowe warunki dla Twoich zwierząt.</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <h2 class="text-center mb-4">Opinie klientów</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="testimonial-card">
+                            <p>
+                                "Chcę wyrazić wdzięczność za szybki i bezpieczny transport
+                                mojego kota. Kierowca był bardzo uprzejmy i troskliwy."
+                            </p>
+                            <p><strong>- Anna Nowak</strong></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="testimonial-card">
+                            <p>
+                                "Dziękuję za doskonałą pracę! Transport mojego psa przebiegł
+                                bez żadnych problemów. Będę polecać waszą firmę wszystkim
+                                moim znajomym."
+                            </p>
+                            <p><strong>- Jan Kowalski</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Success</title>
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img src="{% static 'admin/img/icon-yes.svg' %}" alt="PP" width="120">
+    <p></p>
+    <h1>Zamówienie złożone poprawnie!</h1>
+    <form action="{% url 'main' %}" method="get">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary mt-3">Strona główna</button>
+    </form>
+</div>
+</body>
+</html>
